@@ -12,6 +12,7 @@ import domain.GamePlayDomainModel;
 import domain.GameRuleCardsDomainModel;
 import domain.GameRuleDomainModel;
 import domain.RuleDomainModel;
+import logic.GameRuleCardsBLL;
 
 public class GamePlay extends GamePlayDomainModel {
 
@@ -19,17 +20,17 @@ public class GamePlay extends GamePlayDomainModel {
 	private ArrayList<GamePlayPlayerHand> GamePlayerHand = new ArrayList<GamePlayPlayerHand>();
 	private ArrayList<GamePlayPlayerHand> GameCommonHand = new ArrayList<GamePlayPlayerHand>();
 	private GameRuleDomainModel rle;
-	private ArrayList<GameRuleCardsDomainModel> rlecards;
+	private int[] iCards;
 	private Deck GameDeck = null;
 	
-	public GamePlay(GameRuleDomainModel rle, ArrayList<GameRuleCardsDomainModel> rlecards)
+	public GamePlay(GameRuleDomainModel rle)
 	{
 		this.setGameID(UUID.randomUUID());
 		this.setNbrOfCards(rle.getPLAYERNUMBEROFCARDS());
 		this.setMaxNbrOfPlayers(rle.getMAXNUMBEROFPLAYERS());
 		this.setNbrOfJokers(rle.getNUMBEROFJOKERS());
 		this.rle = rle;
-		this.rlecards = rlecards;
+		this.iCards = GameRuleCardsBLL.getCardsIntArray(rle.getRULEID());
 	}
 
 	public GameRuleDomainModel getRule()
@@ -38,7 +39,7 @@ public class GamePlay extends GamePlayDomainModel {
 	}	
 	
 	public ArrayList<GameRuleCardsDomainModel> getRuleCards() {
-		return this.rlecards;
+		return this.getRuleCards();
 	
 	}
 	

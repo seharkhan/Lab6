@@ -275,10 +275,7 @@ public class PokerTableController {
 		HashMap<String, GameRuleDomainModel> hs = new HashMap();
 		hs = GameRuleBLL.getRuleHashSet();		
 		GameRuleDomainModel gr = hs.get(strRuleName);
-		
-		//Creates an array list of the rows that correspond to that rule
-		ArrayList<GameRuleCardsDomainModel> rlecards = GameRuleCardsBLL.getCardsRules(gr.getRULEID());
-		
+				
 		//tglGame = mainApp.getToggleGroup();
 		
 		eGameState = eGameState.StartOfGame;
@@ -303,7 +300,7 @@ public class PokerTableController {
 		winner4.setVisible(false);
 
 		// Get the Rule, start the Game
-		gme = new GamePlay(rle, rlecards);
+		gme = new GamePlay(rle);
 
 		// Add the seated players to the game
 		for (Player p : mainApp.GetSeatedPlayers()) {

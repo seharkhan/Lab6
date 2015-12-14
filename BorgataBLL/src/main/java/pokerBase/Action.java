@@ -26,7 +26,7 @@ public class Action {
 		{
 			this.bEvaluateHand = true;
 		}
-		//this.
+		this.setiCardDrawn(gme.getNbrOfCards());
 	}
 
 	public GamePlay getGme() {

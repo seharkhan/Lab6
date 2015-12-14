@@ -51,10 +51,8 @@ public class ListHands_Test {
 		HashMap<String, GameRuleDomainModel> hs = new HashMap();
 		hs = GameRuleBLL.getRuleHashSet();	
 		GameRuleDomainModel gr = hs.get(strRuleName);
-		
-		ArrayList<GameRuleCardsDomainModel> rlecards = GameRuleCardsBLL.getCardsRules(gr.getRULEID());
-		
-		GamePlay gme = new GamePlay(gr, rlecards);
+				
+		GamePlay gme = new GamePlay(gr);
 		
 		playerHand.AddCardToHand(new Card(eSuit.CLUBS, eRank.ACE, 0));
 		playerHand.AddCardToHand(new Card(eSuit.CLUBS, eRank.KING, 0));
@@ -101,10 +99,8 @@ public class ListHands_Test {
 		HashMap<String, GameRuleDomainModel> hs = new HashMap();
 		hs = GameRuleBLL.getRuleHashSet();	
 		GameRuleDomainModel gr = hs.get(strRuleName);
-		
-		ArrayList<GameRuleCardsDomainModel> rlecards = GameRuleCardsBLL.getCardsRules(gr.getRULEID());
-		
-		GamePlay gme = new GamePlay(gr, rlecards);
+				
+		GamePlay gme = new GamePlay(gr);
 
 		playerHand.AddCardToHand(new Card(eSuit.CLUBS, eRank.ACE, 0));
 		playerHand.AddCardToHand(new Card(eSuit.CLUBS, eRank.KING, 0));
@@ -158,10 +154,8 @@ public class ListHands_Test {
 		HashMap<String, GameRuleDomainModel> hs = new HashMap();
 		hs = GameRuleBLL.getRuleHashSet();	
 		GameRuleDomainModel gr = hs.get(strRuleName);
-		
-		ArrayList<GameRuleCardsDomainModel> rlecards = GameRuleCardsBLL.getCardsRules(gr.getRULEID());
-		
-		GamePlay gme = new GamePlay(gr, rlecards);
+				
+		GamePlay gme = new GamePlay(gr);
 
 		playerHand.AddCardToHand(new Card(eSuit.CLUBS, eRank.ACE, 0));
 		playerHand.AddCardToHand(new Card(eSuit.CLUBS, eRank.KING, 0));
@@ -214,10 +208,8 @@ public class ListHands_Test {
 		HashMap<String, GameRuleDomainModel> hs = new HashMap();
 		hs = GameRuleBLL.getRuleHashSet();	
 		GameRuleDomainModel gr = hs.get(strRuleName);
-		
-		ArrayList<GameRuleCardsDomainModel> rlecards = GameRuleCardsBLL.getCardsRules(gr.getRULEID());
-		
-		GamePlay gme = new GamePlay(gr, rlecards);
+				
+		GamePlay gme = new GamePlay(gr);
 		
 		playerHand.AddCardToHand(new Card(eSuit.CLUBS, eRank.ACE, 0));
 		playerHand.AddCardToHand(new Card(eSuit.CLUBS, eRank.KING, 0));

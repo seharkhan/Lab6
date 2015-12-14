@@ -35,6 +35,24 @@ public class GameRuleCardsBLL   {
 
 	}
 	
+	public static int[] getCardsIntArray(int RuleID) {
+		
+		ArrayList<GameRuleCardsDomainModel> grC = new ArrayList<GameRuleCardsDomainModel>();
+		
+		int[] iCards = new int[grC.size()];
+		int a = 0;
+		
+		for (GameRuleCardsDomainModel grCards: getCardsRules(RuleID))
+		
+		{
+			iCards[a]=grCards.getNBROFCARDS();
+			
+		}
+		
+		return iCards;
+
+	}
+	
 	public static HashMap<String, GameRuleCardsDomainModel> getRuleCardsHashSet(int RuleID)
 	{
 		HashMap<String, GameRuleCardsDomainModel> HashRuleCardsSet = new HashMap();
